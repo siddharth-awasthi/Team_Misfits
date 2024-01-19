@@ -1,0 +1,93 @@
+nav{
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1b2430;
+    padding: 10px 10px;
+    height: 10vh;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, #00000017 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(51, 228, 237, 0.09) 0px 32px 16px;}
+.navimg{
+    border-radius: 24px;
+    box-shadow: 0 0 8px black;
+    width: 18vh;
+    height: 10vh;
+}
+#ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#ul li{
+    position: relative;
+    padding: 1vw;
+}
+
+#ul li a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    
+}
+#ul li a:hover,
+#ul li a.active{
+
+    color: #17cf97;
+}
+
+#ul li a:hover::after,
+#ul li a.active::after{
+    content: "";
+    width: 40%;
+    height: 3px;
+    background-color: #17cf97;
+    position: absolute;
+    bottom: -3px;
+    left: 10px;
+}
+#mobile{
+    display: none;
+}
+
+
+
+
+#mobile i {
+    color: #fff;
+}
+
+@media screen and (max-width: 760px){
+    #ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: #1b2430;
+        position: fixed;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(51, 228, 237, 0.09) 0px 32px 16px;
+        top: 10vh;
+        right: -300px;
+        width: 30vw;
+        height: 100vh;
+    }
+    #ul.active{
+        right: 0px;
+        transition: 0.3s ease-in-out;
+    }
+    #ul li{
+        padding-top: 30px;
+        cursor: pointer;
+    }
+    #mobile{
+        display: block;
+    }
+    img{
+        height: 7vh;
+        width: 12vh;
+    }
+    
+}
